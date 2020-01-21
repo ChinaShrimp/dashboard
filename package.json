@@ -1,6 +1,6 @@
 {
   "name": "dashboard",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "Place this app in **nextcloud/apps/**",
   "author": {
     "name": "Maxence Lange",
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/nextcloud/dashboard#readme",
   "dependencies": {
+    "flip": "github:nnattawat/flip",
     "gridstack": "^0.3.0"
   },
   "devDependencies": {}
