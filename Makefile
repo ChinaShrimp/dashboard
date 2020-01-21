@@ -37,17 +37,16 @@ clean:
 	rm -rf node_modules components vendor
 
 npm:
-	npm install gridstack
+	npm install
 	cp node_modules/gridstack/dist/gridstack.all.js ./js/
 	cp node_modules/gridstack/dist/gridstack.css ./css/
-	npm install nnattawat/flip
 	cp node_modules/flip/dist/jquery.flip.js ./js/
 
 # composer packages
 composer:
 	composer install --prefer-dist
 
-appstore: composer npm clean
+appstore: composer npm
 	mkdir -p $(sign_dir)
 	rsync -a \
 	--exclude=/build \
