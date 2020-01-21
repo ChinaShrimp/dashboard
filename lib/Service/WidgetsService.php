@@ -272,11 +272,11 @@ class WidgetsService implements IWidgetsService {
 	 */
 	private function getWidgetsFromApp(string $appId) {
 		$appInfo = $this->appManager->getAppInfo($appId);
-//
-//		if (!is_array($appInfo) || !key_exists('dashboard', $appInfo)
-//			|| !key_exists('widget', $appInfo['dashboard'])) {
-//			return;
-//		}
+
+		if (!is_array($appInfo) || !key_exists('dashboard', $appInfo)
+			|| !key_exists('widget', $appInfo['dashboard'])) {
+			return;
+		}
 
 		$widgets = $this->getArray('dashboard.widget', $appInfo, []);
 		if (empty($widgets)) {
